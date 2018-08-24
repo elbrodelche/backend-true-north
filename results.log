@@ -1,0 +1,10 @@
+{"message":"Restaurant API","level":"info"}
+{"message":"Listenig in ip: 127.0.0.1 port:9001","level":"info"}
+{"message":"Process Id:80812","level":"info"}
+{"message":"Closing server PID:80812","level":"warn"}
+{"message":"Error detected...","level":"warn"}
+{"message":"Process Id:80877","level":"warn"}
+{"message":"{\"errno\":\"EADDRINUSE\",\"code\":\"EADDRINUSE\",\"syscall\":\"listen\",\"address\":\"127.0.0.1\",\"port\":9000}","level":"warn"}
+{"message":"Error detected...","level":"warn"}
+{"message":"Process Id:80908","level":"warn"}
+{"message":"{\"errno\":\"EADDRINUSE\",\"code\":\"EADDRINUSE\",\"syscall\":\"listen\",\"address\":\"127.0.0.1\",\"port\":9000}","level":"warn"}

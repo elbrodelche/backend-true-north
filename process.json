@@ -1,0 +1,37 @@
+{
+  "apps": [
+    {
+      "name": "order-worker",
+      "script": "./services/notifications/order_worker.js",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "notification-worker",
+      "script": "./services/notifications/notification_worker.js",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "api",
+      "script": "./services/api/app.js",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "pm2 start process.json",
+    "stop": "pm2 stop process.json",
+    "api": "node ./services/api/app.js",
+    "sms-worker": "n ./services/notifications/notification_worker.js",
+    "notification-worker": "node ./services/notifications/order_worker.js",
+    "create-schema": "node ./services/api/models/schema.js"
+  },
+  "author": "Juan Carlos Migliavacca",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "amqplib": "^0.5.2",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
+    "gmail-send": "^1.2.14",
+    "google-distance-matrix": "^1.1.1",
+    "js-yaml": "^3.12.0",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "nodemailer": "^4.6.7",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.88.0",
+    "sequelize": "^4.38.0",
+    "winston": "^3.0.0"
+  }
+}
