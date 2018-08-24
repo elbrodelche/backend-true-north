@@ -5,8 +5,8 @@ const fs = require('fs');
 // Get the config file
 let config = {};
 try {
-	config = yaml.safeLoad(fs.readFileSync('../../config/rabbit.yml', 'utf8'));
-	mail = yaml.safeLoad(fs.readFileSync('../../config/mail.yml', 'utf8'));
+	config = yaml.safeLoad(fs.readFileSync('./config/rabbit.yml', 'utf8'));
+	mail = yaml.safeLoad(fs.readFileSync('./config/mail.yml', 'utf8'));
 } catch (e) {
 	console.log(e);
 }
@@ -16,7 +16,7 @@ amqp.connect(config.url, function(err, conn) {
 		var q = 'orders';
 
 		ch.assertQueue(q, {durable: true});
-
+		console.log('MAIL happy and waiting.');
 		ch.consume(q, function(msg) {
 			// send mail
 			let data = JSON.parse(msg.content);
