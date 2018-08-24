@@ -24,10 +24,10 @@ amqp.connect(config.url, function(err, conn) {
 
 				console.log('Writing log:' + data.id);
 
-			let content = `Your order is ready. Will arrive in ${data.eta} aprox. to \$${data.address} for total: ${data.cost}`;
+			let content = `Your order ${data.id} is ready. Will arrive in ${data.eta} aprox. to \$${data.address} for total: ${data.cost}`;
 
 			// write to a new file named 2pac.txt
-			fs.writeFile('sms.log', content, (err) => {
+			fs.writeFile('./services/notifications/sms.log', content, (err) => {
 				if (err) throw err;
 			});
 
