@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-npm install pm2 --save
+npm install pm2 -g
 npm install
 npm run schema
 npm start
