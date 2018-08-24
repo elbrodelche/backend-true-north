@@ -10,7 +10,7 @@
     "start": "pm2 start process.json",
     "stop": "pm2 stop process.json",
     "api": "node ./services/api/app.js",
-    "sms-worker": "n ./services/notifications/notification_worker.js",
+    "sms-worker": "node ./services/notifications/notification_worker.js",
     "notification-worker": "node ./services/notifications/order_worker.js",
     "create-schema": "node ./services/api/models/schema.js"
   },
