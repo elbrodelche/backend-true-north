@@ -5,11 +5,13 @@
 ## Install
 
 ```bash
-npm install pm2 --save   
+npm install pm2 --save
 npm install
 npm run schema
 npm start
 ```
+
+After npm start, you can use pm2 commands to check the services status.
 
 ## Usage
 
