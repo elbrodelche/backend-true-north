@@ -19,9 +19,12 @@ amqp.connect(config.url, function(err, conn) {
 		console.log('SMS happy and waiting.');
 		ch.consume(q, function(msg) {
 
-				// Simulate sms send
+			// Simulate sms send
 				let data = JSON.parse(msg.content);
-				let content = `Your order is ready. Will arrive in ${data.eta} aprox. to \$${data.address} for total: ${data.cost}`;
+
+				console.log('Writing log:' + data.id);
+
+			let content = `Your order is ready. Will arrive in ${data.eta} aprox. to \$${data.address} for total: ${data.cost}`;
 
 			// write to a new file named 2pac.txt
 			fs.writeFile('sms.log', content, (err) => {

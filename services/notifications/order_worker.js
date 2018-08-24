@@ -20,6 +20,9 @@ amqp.connect(config.url, function(err, conn) {
 		ch.consume(q, function(msg) {
 			// send mail
 			let data = JSON.parse(msg.content);
+
+			console.log('Sending email:' + data.id);
+
 			let send = require('gmail-send')({
 				user: mail.user ,           // Your GMail account used to send emails
 				pass: mail.pass,           // Application-specific password
